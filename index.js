@@ -11,6 +11,7 @@ app.use(express.json());
 
 app.use("/todo", todosRouter);
 app.use("/user", usersRouter);
+const { SwaggerUIBundle, SwaggerUIStandalonePreset } = require('swagger-ui-dist');
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 mongoose
